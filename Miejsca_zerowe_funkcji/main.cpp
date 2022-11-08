@@ -62,7 +62,7 @@ void kwadratowa(){
 
 void kanoniczna()
 {
-    double p,q,a,msc0,msc1;
+    double p,q,a,x1,x2;
     cout << "Program do obliczania miejsc zerowych funkcji w postaci kanonicznej."<<endl;
     cout << "Podaj p: " <<  endl; cin >> p;
     cout << "Podaj q: " <<endl; cin >> q;
@@ -73,21 +73,22 @@ void kanoniczna()
     }
     else
     {
-        msc0=p+sqrt(-q/a);
-        msc1=p-sqrt(-q/a);
-        cout << "Pierwsze miejsce zerowe to: " << msc0 << endl;
-        cout << "Drugie miejsce zerowe to: " << msc1<< endl;
+        x1=p+sqrt(-q/a);
+        x2=p-sqrt(-q/a);
+        cout << "Pierwsze miejsce zerowe to: " << x1 << endl;
+        cout << "Drugie miejsce zerowe to: " << x2<< endl;
     }
 }
 
 int main()
 {
     int x = 0;
-    while(x>2 || x<1)
+    while(x>3 || x<1)
     {
     cout<<"MENU"<<endl;
     cout<<"1.Funkca liniowa"<<endl;
     cout<<"2.Funkcja kwadratowa"<<endl;
+    cout<<"3. Funkcja w postaci kanonicznej" <<endl;
     cout<<"Wybieram : ";
     cin>>x;
     system("cls");
@@ -96,11 +97,14 @@ int main()
     switch (x)
     {
        case 1:
-           liniowa();
+            liniowa();
             break;
        case 2:
-           kwadratowa();
-           break;
+            kwadratowa();
+            break;
+        case 3:
+            kanoniczna();
+            break;
     }
 
     return 0;
