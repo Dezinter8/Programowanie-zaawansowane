@@ -60,6 +60,26 @@ void kwadratowa(){
     }
 }
 
+void kanoniczna()
+{
+    double p,q,a,msc0,msc1;
+    cout << "Program do obliczania miejsc zerowych funkcji w postaci kanonicznej."<<endl;
+    cout << "Podaj p: " <<  endl; cin >> p;
+    cout << "Podaj q: " <<endl; cin >> q;
+    cout << "Podaj a: " << endl; cin >>a;
+    if((-q/a)<0)
+    {
+        cout << "Funcja nie ma miejsc zerowych" << endl;
+    }
+    else
+    {
+        msc0=p+sqrt(-q/a);
+        msc1=p-sqrt(-q/a);
+        cout << "Pierwsze miejsce zerowe to: " << msc0 << endl;
+        cout << "Drugie miejsce zerowe to: " << msc1<< endl;
+    }
+}
+
 int main()
 {
     int x = 0;
