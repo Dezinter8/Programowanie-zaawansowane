@@ -49,7 +49,7 @@ int main()
             cout << "Dwa miejsca zerowe: x1 = " << x1 << " x2 = " << x2 << endl;
         }
     } else {
-        cout << "A jest rowne 0" << endl;
+        cout << "A jest rowne 0, funkcja nie ma rozwiązania" << endl;
     }
 
     return 0;
