@@ -3,9 +3,8 @@
 
 using namespace std;
 
-int main()
-{
-    float a , b , c , x , y , z, x1, x2, delta;
+void liniowa(){
+    float a , b , c , x , y;
     cout << "Program do obliczania miejsca zerowych funkcji liniowej." << endl;
     cout << "Podaj a:";
     cin >> a;
@@ -30,9 +29,17 @@ int main()
     cout << "Postac kierunkowa funkcji liniowej: " << endl;
     y=(a*x)+b;
     cout << "y = " << y;
+}
 
-    cout << endl;
+void kwadratowa(){
+    float a , b , c , x , y , z, x1, x2, delta;
     cout << " Program obliczajacy miejsca zerowe funkcji kwadratowej" << endl;
+    cout << "Podaj a:";
+    cin >> a;
+    cout << "Podaj b: ";
+    cin >> b;
+    cout << "Podaj c: ";
+    cin >> c;
 
     if (a!=0) {
         delta= (b*b)-4*a*c;
@@ -50,6 +57,30 @@ int main()
         }
     } else {
         cout << "A jest rowne 0, funkcja nie ma rozwiązania" << endl;
+    }
+}
+
+int main()
+{
+    int x = 0;
+    while(x>2 || x<1)
+    {
+    cout<<"MENU"<<endl;
+    cout<<"1.Funkca liniowa"<<endl;
+    cout<<"2.Funkcja kwadratowa"<<endl;
+    cout<<"Wybieram : ";
+    cin>>x;
+    system("cls");
+     }
+
+    switch (x)
+    {
+       case 1:
+           liniowa();
+            break;
+       case 2:
+           kwadratowa();
+           break;
     }
 
     return 0;
